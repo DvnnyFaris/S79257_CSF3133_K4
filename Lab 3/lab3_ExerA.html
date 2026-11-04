@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- this will be the title of the website -->
+    <title>Campus Bakery Online Order Page</title>
+
+</head>
+<body>
+    <!-- Header Section -->
+    <div id = "header">
+        <h1>CampusBake&reg; <span> Freshly baked goodness every day! </span></h1>
+    </div>
+
+    <!-- Navigation Section -->
+    <div id = "nav">
+        <a href="#content">Order form</a> | <a href="#sidebar">Price List</a> |
+        <a href="#footer">Contact Us</a>
+    </div>
+
+    <!-- Main Content Section -->
+    <div id = "content">
+        <p><strong>CampusBake</strong> is dedicated in providing you with the <em>freshest and most delicious</em> baked goods on campus. Check out our <a href="#sidebar">price list</a> below to get started.</p>
+
+    <!-- Order Form -->
+    <form action="submit_order.php" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="pdate">Pickup Date:</label><br>
+        <input type="date" id="pdate" name="pdate" required><br><br>
+
+        <label for="ptime">Pickup Time:</label><br>
+        <input type="time" id="ptime" name="ptime" required><br><br>
+
+        <label for="flavour">Flavour:</label><br>
+        <input id="flavour" name="flavour" list="flavours" required><br><br>
+        <datalist id="flavours">
+            <option value="Chocolate">
+            <option value="Vanilla">
+            <option value="Strawberry">
+            <option value="Red Velvet">
+            <option value="Matcha">
+        </datalist><br><br>
+
+        <label for="icing">Icing Colour</label><br>
+        <input type="color" id="icing" name="icing"><br><br>
+
+        <label for="sweetness">Sweetness Level (1-5):</label><br>
+        <input type="range" id="sweetness" name="sweetness" min="1" max="5" step="1"><br><br>
+
+    <!--Price Calculator -->
+        <h2>Price Calculator</h2>
+        <p>Enter the quantity of each item you'd like to order:</p>
+            <label for="cupcake-qty">Cupcakes (RM 3.00):</label><br>
+            <input type="number" id="cupcake-qty" name="cupcake-qty" min="0" value="0"><br><br>
+
+            <label for="slices-qty">Cake Slices (RM 5.00):</label><br>
+            <input type="number" id="slices-qty" name="slices-qty" min="0" value="0"><br><br>
+
+    <!--Output-->
+            <p><strong>Total Price: RM <output name="totalprice" for="cupcake-qty slices-qty"></output></strong></p>
+
+            <input type="submit" value="Submit Order">
+        </form>
+    </div>
+    <!--End of form-->
+
+    <!-- Sidebar Section -->
+    <div id = "sidebar">
+        <h2> CampusBake&reg; Price List</h2>
+        <p><em>Special Promotion:</em> Orders &gt; 10 pieces get a free drink!</p>
+        <ul>
+            <li>Cupcakes - RM 3.00 each</li>
+            <li>Cake Slices - RM 5.00 each</li>
+        </ul>
+    </div>
+    <!-- Footer Section -->
+    <div id = "footer">
+        <p>&copy; 2026 CampusBake. All rights reserved. &nbsp;</p>
+    </div>
+        
+</body>
+</html>
+
+<!-- Comments-->
+<!--submitted with all fields empty: there's a message pop-out at the name section "Please fill out this field."-->
+<!-- Entered "myemail" in the field and submitted : Please include an "@" in the email address.
+ 'myemail' is missing an "@" symbol' -->
